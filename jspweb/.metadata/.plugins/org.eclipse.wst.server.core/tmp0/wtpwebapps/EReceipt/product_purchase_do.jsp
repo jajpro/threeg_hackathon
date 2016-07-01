@@ -55,6 +55,10 @@ try {
 		pstmt2.setInt(2, Integer.parseInt(amount[i]));
 		pstmt2.setInt(3, receipt_id);
 		
+		pstmt2.executeUpdate();
+		
+		pstmt2.clearParameters();
+		
 	}
 	
 	pstmt3.setInt(1, receipt_id);
@@ -62,7 +66,6 @@ try {
 	
 
 	pstmt1.executeUpdate();
-	pstmt2.executeUpdate();
 	pstmt3.executeUpdate();
 	
 	rs.close();

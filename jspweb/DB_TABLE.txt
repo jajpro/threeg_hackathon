@@ -1,0 +1,10 @@
+store(store_id int,id char(10),pwd varchar(20),store_name varchar(50),
+store_address varchar(50),primary key(store_idx))
+
+
+product(product_id int,store_id int,product_name varchar(50) ,product_price int,product_category varchar(50),primary key(product_idx))
+
+
+1.  receipt(receipt_id int PRIMARY KEY, store_id int, card_company varchar(50), card_number int, date)
+2. item(item_id int PRIMARY KEY,product_id int, amount int, receipt_id int)
+3. receipt_user(receipt_id int UNIQUE, nfc_id)
